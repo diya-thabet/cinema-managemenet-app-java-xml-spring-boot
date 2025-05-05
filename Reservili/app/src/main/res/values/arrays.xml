@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ticket_types">
+        <item>GALERIE</item>
+        <item>BALCON</item>
+        <item>ORCHESTRE</item>
+
+    </string-array>
+</resources>

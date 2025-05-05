@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popupContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="#2A3439"
+    app:cardElevation="4dp">
+
+    <Spinner
+        android:id="@+id/spinnerCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:backgroundTint="#C3073F"
+        android:popupBackground="#2A3439"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Spinner
+        android:id="@+id/spinnerSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:backgroundTint="#C3073F"
+        android:popupBackground="#2A3439"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/spinnerCity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/etDateFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Date"
+        android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+        android:focusable="false"
+        android:clickable="true"
+        android:backgroundTint="#C3073F"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B0B0B0"
+        app:layout_constraintTop_toBottomOf="@id/spinnerSort"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnResetFilters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Réinitialiser"
+        android:backgroundTint="#C3073F"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/etDateFilter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:foreground="?attr/selectableItemBackground"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

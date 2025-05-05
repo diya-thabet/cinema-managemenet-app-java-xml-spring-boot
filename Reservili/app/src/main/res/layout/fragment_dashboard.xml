@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_cinematic">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTitre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Titre"
+            android:backgroundTint="#C3073F"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B0B0B0"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date (YYYY-MM-DD)"
+            android:backgroundTint="#C3073F"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B0B0B0"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editHeure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Heure de début"
+            android:backgroundTint="#C3073F"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B0B0B0"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+
+        <EditText
+            android:id="@+id/editVille"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ville"
+            android:backgroundTint="#C3073F"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B0B0B0"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnChercher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chercher"
+            android:backgroundTint="#C3073F"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="12dp"
+            android:padding="12dp"
+            android:foreground="?attr/selectableItemBackground" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/resultRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+</ScrollView>

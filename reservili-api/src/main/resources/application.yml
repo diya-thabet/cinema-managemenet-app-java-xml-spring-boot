@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: reservili-api
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/mobile
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mohamaddhia@gmail.com
+    password: uchu spwt dlsn rjlp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true

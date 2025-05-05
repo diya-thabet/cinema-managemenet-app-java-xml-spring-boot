@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_cinematic">
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/spectacleTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Titre du spectacle"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choisir Le Crenau"
+                android:textSize="16sp"
+                android:textColor="#B0B0B0" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/crenauxRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type de ticket"
+                android:textSize="16sp"
+                android:textColor="#B0B0B0" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="249dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/theatre" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/ticketTypeGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                android:layout_marginTop="4dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/toggleBalcon"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Balcon"
+                    android:textColor="#FFFFFF"
+                    app:strokeColor="#C3073F"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/toggleOrchestre"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Orchestre"
+                    android:textColor="#FFFFFF"
+                    app:strokeColor="#C3073F"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/toggleGalerie"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Galerie"
+                    android:textColor="#FFFFFF"
+                    app:strokeColor="#C3073F"
+                    app:cornerRadius="8dp" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:id="@+id/unitPriceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prix unitaire : 0 DT"
+                android:textSize="16sp"
+                android:textColor="#B0B0B0"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Quantité"
+                android:textSize="16sp"
+                android:textColor="#B0B0B0" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+
+                <Button
+                    android:id="@+id/btnMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="−"
+                    android:backgroundTint="#C3073F"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="8dp" />
+
+                <EditText
+                    android:id="@+id/quantityEditText"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:text="1"
+                    android:backgroundTint="#C3073F"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#B0B0B0" />
+
+                <Button
+                    android:id="@+id/btnPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:backgroundTint="#C3073F"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="8dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vos informations"
+                android:textSize="16sp"
+                android:textColor="#B0B0B0" />
+
+            <EditText
+                android:id="@+id/firstNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Prénom"
+                android:backgroundTint="#C3073F"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:padding="12dp"
+                android:layout_marginTop="4dp"/>
+
+            <EditText
+                android:id="@+id/lastNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nom"
+                android:backgroundTint="#C3073F"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:padding="12dp"
+                android:layout_marginTop="4dp"/>
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:backgroundTint="#C3073F"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:padding="12dp"
+                android:layout_marginTop="4dp"/>
+
+            <EditText
+                android:id="@+id/phoneEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Téléphone"
+                android:inputType="phone"
+                android:backgroundTint="#C3073F"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:padding="12dp"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mode de paiement"
+                android:textSize="16sp"
+                android:textColor="#B0B0B0" />
+
+            <RadioGroup
+                android:id="@+id/paymentMethodGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <RadioButton
+                    android:id="@+id/radioCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carte Bancaire"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#C3073F" />
+
+                <RadioButton
+                    android:id="@+id/radioCash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Solde Telephonique"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#C3073F"
+                    android:layout_marginStart="16dp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/totalPriceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total : 0 DT"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/reserveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Réserver"
+                android:backgroundTint="#C3073F"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="12dp"
+                android:padding="12dp"
+                android:layout_marginTop="12dp"
+                android:foreground="?attr/selectableItemBackground"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/loadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#801C2526"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="@android:style/Widget.Material.Light.ProgressBar.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+</FrameLayout>

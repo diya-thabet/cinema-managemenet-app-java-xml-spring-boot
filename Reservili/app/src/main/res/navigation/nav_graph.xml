@@ -1,0 +1,105 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <!-- Fragment pour Home -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.reservili.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_detailSpectacleFragment"
+            app:destination="@id/detailSpectacleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_navigation_home_to_reservationFragment"
+            app:destination="@id/reservationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_navigation_home_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <!-- Fragment pour Search -->
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.reservili.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+    <action
+        android:id="@+id/action_searchFragment_to_detailSpectacleFragment"
+        app:destination="@id/detailSpectacleFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_searchFragment_to_reservationFragment"
+            app:destination="@id/reservationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+    <!-- Fragment pour Reservations -->
+    <fragment
+        android:id="@+id/navigation_reservations"
+        android:name="com.example.reservili.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <!-- Détails du Spectacle Fragment -->
+    <fragment
+        android:id="@+id/detailSpectacleFragment"
+        android:name="com.example.reservili.ui.detailspectacle.DetailSpectacleFragment"
+        android:label="Détails du Spectacle">
+        <action
+            android:id="@+id/action_detailSpectacleFragment_to_reservationFragment"
+            app:destination="@id/reservationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <argument
+            android:name="spectacle"
+            app:argType="com.example.reservili.model.Spectacle" />
+    </fragment>
+
+    <!-- Réservation Fragment -->
+    <fragment
+        android:id="@+id/reservationFragment"
+        android:name="com.example.reservili.ui.reservation.ReservationFragment"
+        android:label="Réservation">
+        <argument
+            android:name="spectacle"
+            app:argType="com.example.reservili.model.Spectacle" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.reservili.ui.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/login_fragment" >
+    <action
+        android:id="@+id/action_loginFragment_to_navigation_home"
+        app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.reservili.ui.signup.SignUpFragment"
+        android:label="Sign Up" >
+    <action
+        android:id="@+id/action_signupFragment_to_loginFragment"
+        app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.reservili.ui.login.ProfileFragment"
+        android:label="Profil" >
+    </fragment>
+
+
+</navigation>

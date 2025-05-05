@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:backgroundTint="#2A3439"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="4dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivCalendar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/calendar"
+                    card_view:tint="#C3073F" />
+
+                <TextView
+                    android:id="@+id/tvDateCrenau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="10/01/2025"
+                    android:textColor="#FFFFFF"
+                    android:textAppearance="?attr/textAppearanceSubtitle2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="8dp">
+
+                <TextView
+                    android:id="@+id/tvNomLieu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Théâtre de Carthage"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:textAppearance="?attr/textAppearanceBody1" />
+
+                <TextView
+                    android:id="@+id/tvAdresse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rue de Carthage"
+                    android:textColor="#B0B0B0"
+                    android:textAppearance="?attr/textAppearanceBody2" />
+
+                <TextView
+                    android:id="@+id/tvVille"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Tunis"
+                    android:textColor="#B0B0B0"
+                    android:textAppearance="?attr/textAppearanceCaption" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivLocation"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/map"
+                android:tint="#C3073F" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/selectionOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#801C2526"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/selectionTick"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_check"
+            android:visibility="gone"
+            card_view:tint="#C3073F" />
+
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

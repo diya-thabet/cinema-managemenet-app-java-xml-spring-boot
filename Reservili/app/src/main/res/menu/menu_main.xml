@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Votre item “Profil” / avatar, initialement invisible -->
+    <item
+        android:id="@+id/action_user"
+        android:title="Profil"
+        app:showAsAction="always"
+        android:paddingEnd="12dp"
+        app:actionLayout="@layout/action_user_layout"/>
+</menu>
